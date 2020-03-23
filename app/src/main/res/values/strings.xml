@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rates Task</string>
+    <string name="title">USD</string>
+    <string name="description">US Dollar</string>
+    <string name="amount">1183.06</string>
+    <string name="single_amount">1.0</string>
+</resources>

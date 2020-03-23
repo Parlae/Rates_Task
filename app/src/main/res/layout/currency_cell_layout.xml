@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cellLayout"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/curr_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="16dp"
+        android:src="@drawable/eur"
+        app:civ_border_color="?attr/colorButtonNormal"
+        app:civ_border_width="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/title"
+        app:layout_constraintStart_toEndOf="@id/curr_image"
+        app:layout_constraintTop_toTopOf="@+id/curr_image" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:gravity="top"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/description"
+        android:textAppearance="@style/description"
+        android:translationY="-1.8sp"
+        app:layout_constraintStart_toEndOf="@+id/curr_image"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:gravity="right|top"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/single_amount"
+        android:textAppearance="@style/amount"
+        android:translationY="-2.28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
